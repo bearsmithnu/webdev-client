@@ -70,6 +70,19 @@ export default function HighlightedBoxLab() {
       >
         <img src="/images/you want cancer with that dog.jpg" width="300px" alt="More cancer dogs" />
       </HighlightedBox>
+      <HighlightedBox
+        backgroundColor="honeydew"
+        borderColor="seagreen"
+        borderWidth={3}
+        borderRadius={5}
+      >
+        <h4>Sample nested content</h4>
+        <ul>
+          <li>p</li>
+          <li>a</li>
+          <li>span</li>
+        </ul>
+      </HighlightedBox>
     </div>
   );
 }
