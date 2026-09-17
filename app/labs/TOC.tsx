@@ -45,6 +45,11 @@ export default function TOC() {
             GitHub
           </a>
         </li>
+        <li>
+          <Link id="wd-toc-book-link" href="/book/ch1">
+            Chapter 1
+          </Link>
+        </li>
       </ul>
     </>
   );
