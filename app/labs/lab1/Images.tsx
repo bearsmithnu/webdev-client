@@ -26,6 +26,12 @@ export default function Images() {
           width="200px"
           alt="An advertisement by the plaintiffs in a lawsuit about carcinogens in hot dogs"
         />
+          <img
+          id="wd-with-ai"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzMBnP1-xPBihoLdw_SJL8REKWhQ5rSaJDJYWTvNEIUpulPJcQcEHBgL0q"
+          width="200px"
+          alt="An Edible Arrangement, a bouquet of cut fruit and chocolate."
+        />
       </div>
     );
 }
