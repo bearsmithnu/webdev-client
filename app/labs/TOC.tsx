@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function TOC() {
   return (
     <>
-      <h4>BEAR!</h4>
+      <h4>Bear Smith</h4>
       <ul>
         <li>
           <Link id="wd-home-link" href="/labs">
@@ -29,6 +29,11 @@ export default function TOC() {
           <Link id="wd-kambaz-link" href="/">
             Kambaz
           </Link>
+        </li>
+        <li>
+          <a id="wd-github-link" href="https:/github.com/bearsmithnu/webdev-client">
+            GitHub
+          </a>
         </li>
       </ul>
     </>
