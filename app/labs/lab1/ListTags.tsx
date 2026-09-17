@@ -41,11 +41,20 @@ export default function ListTags() {
         <li>Red Mars</li>
         <li>The Forever War</li>
       </ul>
+      
       My own favorite books!
       <ul id="wd-your-books">
         <li>Gone Girl by Gillian Flynn</li>
         <li>The Road by Cormac McCarthy</li>
         <li>In the Company of Bears by Benjamin Kilham</li>
+      </ul>
+
+      <ul id="wd-ai-html-tags">
+        <li>p- paragraph</li>
+        <li>h1- biggest heading size</li>
+        <li>ol- ordered list</li>
+        <li>a- anchor, a hyperlink</li>
+        <li>div- block container</li>
       </ul>
     </div>
   );
