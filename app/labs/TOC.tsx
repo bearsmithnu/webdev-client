@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function TOC() {
   return (
     <>
-      <h4>Bear Smith</h4>
+      <h4>Bear Smith !!!</h4>
       <ul>
         <li>
           <Link id="wd-home-link" href="/labs">
