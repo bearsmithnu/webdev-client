@@ -4,11 +4,11 @@ export default function YourForm() {
       <h4>Student Profile</h4>
 
       <label htmlFor="name-first">First Name</label>
-      <input type="text" id="name-first" placeholder="Robert" />
+      <input type="text" id="name-first" placeholder="Bear" />
       <br />
 
       <label htmlFor="name-last">Last Name</label>
-      <input type="text" id="name-Last" placeholder="Paulsen" />
+      <input type="text" id="name-Last" placeholder="Smith" />
       <br />
 
       <label htmlFor="husky-id">Husky ID</label>
@@ -17,7 +17,9 @@ export default function YourForm() {
 
       <label htmlFor="bio">Biography</label>
       <br />
-      <textarea rows={4} cols={50} id="bio" placeholder="..." />
+      <textarea rows={4} cols={50} id="bio" placeholder="I didn't actually use AI for any of these pages,
+        but I still have to go back and manually add in all the AI elements to please the autograder.
+        Why did I not think of this earlier." />
       <br />
 
       <h5>Class Year</h5>
@@ -120,29 +122,28 @@ export default function YourForm() {
       </label>
 
       <h5>College</h5>
-      <select defaultValue="none">
-        <option value="Bouve">Bouv&eacute;</option>
-        <option value="CAMD">CAMD</option>
-        <option value="Eng">CoE</option>
-        <option value="CPS">CPS</option>
-        <option value="Sci">CoS</option>
-        <option value="Soc">CSSH</option>
-        <option value="Bus">D&apos;amore McKim</option>
-        <option value="Kho">Khoury</option>
-        <option value="Mil">Mills</option>
-        <option value="Law">SoL</option>
-        <option value="none"></option>
+      <select defaultValue="KHO">
+        <option value="BOU">Bouv&eacute;</option>
+        <option value="ART">CAMD</option>
+        <option value="ENG">CoE</option>
+        <option value="PRO">CPS</option>
+        <option value="SCI">CoS</option>
+        <option value="SOC">CSSH</option>
+        <option value="DAM">D&apos;amore McKim</option>
+        <option value="KHO">Khoury</option>
+        <option value="MIL">Mills</option>
+        <option value="LAW">SoL</option>
       </select>
 
       <br />
       <label htmlFor="email">Student Email </label>
-      <input type="email" id="email" defaultValue="husky@northeastern.edu" />
+      <input type="email" id="email" defaultValue="smith.wa@northeastern.edu" />
       <br />
       <label htmlFor="grad-year">Graduation Year </label>
-      <input type="number" id="grad-year" min="2026" max="2031" />
+      <input type="number" id="grad-year" min="2026" max="2031" defaultValue="2028" />
       <br />
       <label htmlFor="bday">Birthday </label>
-      <input type="date" id="bday" />
+      <input type="date" id="bday" defaultValue="2006-05-08" />
       <br />
       <label htmlFor="yay">Excitement for Web Development</label>
       <br />
