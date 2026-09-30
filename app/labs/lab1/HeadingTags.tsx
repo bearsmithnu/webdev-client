@@ -14,12 +14,18 @@ export default function HeadingTags() {
             h6. Tag h1 is the largest heading and h6 is the smallest heading. A{" "}
             <span id="wd-inline-span">span</span> sits in this sentence without
             starting a new line.
-            <div id="wd-your-tag">
+            <div id="wd-your-heading">
                 <h4>Bear</h4>
                 Hello, I&apos;m <span id="wd-your-span" color="FF0000">Bear</span>.
                 My favorite food is Teddie peanut butter, and I always get weird looks about it
                 for some reason.
             </div>
+            <h1>1</h1>
+            <h2>2</h2>
+            <h3>3</h3>
+            <h4 id="wd-ai-headings">Lab Notes</h4>
+            <h5 id="wd-ai-headings">What I Built</h5>
+            <h6 id="wd-ai-headings">Next Step</h6>
         </div>
         
     )

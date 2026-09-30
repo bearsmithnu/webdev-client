@@ -27,8 +27,11 @@ export default function ParagraphTags() {
             I&apos;m taking this class because, despite everyone saying that web development 
             is AI&apos;s job now, I feel like it may still be useful.
         </p>
-        <p id = "wd-p-your-2">
+        <p id="wd-p-your-2">
             I like art, so maybe I&apos;ll enjoy the CSS aspect of this class too.
+        </p>
+        <p id="wd-ai-p">
+            A paragraph creates vertical spacing because it is a block element, as it is meant to represent a single unit of text.
         </p>
 
     </div>
