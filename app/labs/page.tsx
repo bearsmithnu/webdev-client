@@ -11,6 +11,11 @@ export default function Labs() {
         <li>
           <Link href="/labs/lab2">Lab 2: CSS Basics</Link>
         </li>
+        <ul>
+          <li>
+            <Link href="/labs/lab2/tailwind">Tailwind</Link>
+          </li>
+        </ul>
         <li>
           <Link href="/labs/lab3">Lab 3: JavaScript Fundamentals</Link>
         </li>
