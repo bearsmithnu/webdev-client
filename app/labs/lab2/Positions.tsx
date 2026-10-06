@@ -1,6 +1,7 @@
 export default function Positions() {
   return (
-    <>
+    <div id="wd-css-positions">
+      <h2>Positions</h2>
       <div id="wd-css-position-relative">
         <h2>Relative</h2>
         <div className="wd-bg-color-gray">
@@ -59,6 +60,6 @@ export default function Positions() {
         <div className="wd-pos-fixed-corner wd-bg-color-red">A!</div>
         <div className="wd-ai-pos-fixed wd-bg-color-red wd-fg-color-white">AI fixed</div>
       </div>
-    </>
+    </div>
   );
 }
