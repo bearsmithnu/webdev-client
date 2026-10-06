@@ -48,7 +48,7 @@ export default function TOC() {
           </Link>
         </li>
         <li>
-          <a id="wd-github-link" href="https://github.com/bearsmithnu/webdev-client">
+          <a id="wd-github-link" href="https://github.com/bearsmithnu/webdev-client/tree/a2">
             GitHub
           </a>
         </li>

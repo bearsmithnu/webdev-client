@@ -25,14 +25,6 @@ export default function Labs() {
         <li>
           <Link href="/">Kambaz</Link>
         </li>
-        <li>
-          <a
-            href="https://github.com/bearsmithnu/webdev-client"
-            id="wd-github-link"
-          >
-            Github
-          </a>
-        </li>
       </ul>
     </div>
   );
