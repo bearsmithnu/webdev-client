@@ -4,11 +4,33 @@ import Lesson from "./Lesson";
 export default function Modules() {
   return (
     <div>
-      <button>Collapse All</button> <button>View Progress</button>{" "}
-      <select defaultValue="publish-all">
-        <option value="publish-all">Publish All</option>
-      </select>{" "}
-      <button>+ Module</button>
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm"
+        >
+          Collapse All
+        </button>
+        <button
+          type="button"
+          className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm"
+        >
+          View Progress
+        </button>
+        <select
+          defaultValue="publish-all"
+          className="rounded border border-neutral-300 bg-white px-3 py-1.5 text-sm"
+        >
+          <option value="publish-all">Publish All</option>
+        </select>
+        <button
+          type="button"
+          className="rounded border border-red-600 bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
+        >
+          + Module
+        </button>
+      </div>
+
       <ul id="wd-modules">
         <Module title="Week 1, Lecture 1 - Course Introduction, Syllabus, Agenda">
           <Lesson title="LEARNING OBJECTIVES">
@@ -49,6 +71,29 @@ export default function Modules() {
             <li className="wd-content-item">Introduction to Providence, RI</li>
             <li className="wd-content-item">Providence, RI pt. II</li>
             <li className="wd-content-item">The Jewelry District</li>
+          </Lesson>
+        </Module>
+        <Module title="Weird 4">
+          <Lesson title="Extraction of peanut proteins">
+            <li className="wd-content-item">
+              <a href="https://www.sciencedirect.com/science/article/pii/S2590259823000183">
+                Reading: Extraction process
+              </a>
+            </li>
+            <li className="wd-content-item">
+              Pure peanut powder tastes awful, though.
+            </li>
+            <li className="wd-content-item">
+              You wouldn&apos;t think it, but something like PB2 that retains a
+              small amount of its oil tastes LEAGUES better than a completely
+              defatted peanut powder.
+            </li>
+          </Lesson>
+        </Module>
+        <Module title="Sample module (AI)">
+          <Lesson title="Sample lesson (AI)">
+            <li className="wd-content-item">Beep</li>
+            <li className="wd-content-item">Boop</li>
           </Lesson>
         </Module>
       </ul>
