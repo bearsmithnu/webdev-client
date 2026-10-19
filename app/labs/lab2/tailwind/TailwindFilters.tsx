@@ -16,7 +16,7 @@ export default function TailwindFilters() {
       <h3 className="text-lg font-bold">Grayscale and brightness</h3>
       <div className="flex" id="wd-ai-filters">
         <img className="grayscale w-1/4" src={src} alt="grayscale" />
-        <img className="grayscale-0 w-1/4" src={src} alt=grayscale 0" />
+        <img className="grayscale-0 w-1/4" src={src} alt="grayscale 0" />
         <img className="brightness-50 w-1/4" src={src} alt="brightness 50" />
         <img className="brightness-150 w-1/4" src={src} alt="brightness 150" />
       </div>
