@@ -4,14 +4,14 @@ export default function TailwindFilters() {
   return (
     <div>
       <h2>Blurs</h2>
-      <div className="flex grid-cols-4">
+      <div className="flex">
         <img className="blur-none w-1/4" src={src} alt="blur none" />
         <img className="blur-sm w-1/4" src={src} alt="blur sm" />
         <img className="blur-lg w-1/4" src={src} alt="blur lg" />
         <img className="blur-2xl w-1/4" src={src} alt="blur 2xl" />
-        
-        <img className="brightness-200 w-1/4" src={src} alt="pale" />
       </div>
+      
+      <img className="brightness-200 w-1/4" src={src} alt="pale" />
       
       <h3 className="text-lg font-bold">Grayscale and brightness</h3>
       <div className="flex" id="wd-ai-filters">
