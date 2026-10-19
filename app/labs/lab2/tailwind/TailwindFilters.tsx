@@ -4,7 +4,7 @@ export default function TailwindFilters() {
   return (
     <div>
       <h2>Blurs</h2>
-      <div className="flex">
+      <div className="flex grid-cols-4">
         <img className="blur-none w-1/4" src={src} alt="blur none" />
         <img className="blur-sm w-1/4" src={src} alt="blur sm" />
         <img className="blur-lg w-1/4" src={src} alt="blur lg" />
