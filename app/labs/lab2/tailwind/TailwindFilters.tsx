@@ -9,17 +9,17 @@ export default function TailwindFilters() {
         <img className="blur-sm w-1/4" src={src} alt="blur sm" />
         <img className="blur-lg w-1/4" src={src} alt="blur lg" />
         <img className="blur-2xl w-1/4" src={src} alt="blur 2xl" />
+        
+        <img className="brightness-200 w-1/4" src={src} alt="pale" />
       </div>
-
-      <img className="brightness-200 w-1/4" src={src} alt="pale" />
-
-      <h3 className="text-2xl">Grayscale and brightness</h3>
-      <img
-        id="wd-ai-filters"
-        className="lg:grayscale grayscale-0 brightness-50 lg:brightness-150 w-1/4"
-        src={src}
-        alt="size up and down to change gray quality and brightness"
-      />
+      
+      <h3 className="text-lg font-bold">Grayscale and brightness</h3>
+      <div className="flex" id="wd-ai-filters">
+        <img className="grayscale w-1/4" src={src} alt="grayscale" />
+        <img className="grayscale-0 w-1/4" src={src} alt=grayscale 0" />
+        <img className="brightness-50 w-1/4" src={src} alt="brightness 50" />
+        <img className="brightness-150 w-1/4" src={src} alt="brightness 150" />
+      </div>
     </div>
   );
 }
