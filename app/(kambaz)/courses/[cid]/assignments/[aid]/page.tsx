@@ -1,4 +1,14 @@
-export default function AssignmentEditor() {
+import Link from "next/link";
+import * as db from "../../../../database";
+
+export default async function AssignmentEditor({
+  params,
+}: {
+  params: Promise<{ cid: string; aid: string }>;
+}) {
+  const { cid, aid } = await params;
+  const assignment = db.assignments.find((a) => a._id === aid);
+
   return (
     <>
       <div id="wd-assignments-editor" className="grid grid-cols-1 gap-4 p-5">
@@ -6,13 +16,14 @@ export default function AssignmentEditor() {
           <label htmlFor="wd-name">Assignment Name</label>
           <input
             id="wd-name"
-            defaultValue="A1 - ENV + HTML"
+            defaultValue={assignment?.title ?? ""}
             className="rounded border border-gray-300 text-md font-light py-3 px-2 inset-shadow-xs"
           />
+          <span>Assignment id: {aid}</span>
         </div>
         <textarea
           id="wd-description"
-          defaultValue="The assignment is available online. Submit a link to the landing page of your Web application running on Vercel."
+          defaultValue={assignment?.description ?? ""}
           className="text-md font-light py-3 px-2 rounded border border-gray-300 inset-shadow-xs h-30"
         />
         <div className="grid grid-cols-2 gap-4 justify-end">
@@ -23,7 +34,7 @@ export default function AssignmentEditor() {
             type="number"
             id="wd-points"
             className="text-md font-light py-3 px-2 rounded border border-gray-300"
-            defaultValue={100}
+            defaultValue={assignment?.points ?? 100}
           />
           <label htmlFor="wd-group" className="flex justify-end">
             Assignment Group
@@ -141,8 +152,9 @@ export default function AssignmentEditor() {
             </label>
             <br />
             <input
-              type="datetime-local"
+              type="date"
               id="wd-due-date"
+              defaultValue={assignment?.due}
               className="text-md font-light py-3 px-2 rounded border border-gray-300"
             />
             <br />
@@ -154,8 +166,9 @@ export default function AssignmentEditor() {
                 </label>
                 <br />
                 <input
-                  type="datetime-local"
+                  type="date"
                   id="wd-available-from"
+                  defaultValue={assignment?.available}
                   className="text-md font-light py-3 px-2 rounded border border-gray-300"
                 />
               </div>
@@ -166,9 +179,9 @@ export default function AssignmentEditor() {
                 </label>
                 <br />
                 <input
-                  type="datetime-local"
+                  type="date"
                   id="wd-available-until"
-                  className="text-md font-light py-3 px-2 rounded border border-gray-300 "
+                  className="text-md font-light py-3 px-2 rounded border border-gray-300"
                 />
               </div>
             </div>
@@ -177,7 +190,7 @@ export default function AssignmentEditor() {
       </div>
 
       <div className="grid grid-cols-1 gap-2">
-          <label htmlFor="wd-ai-editor-notes">Sample notes</label>
+        <label htmlFor="wd-ai-editor-notes">Sample notes</label>
         <textarea
           id="wd-ai-editor-notes"
           placeholder="Take some notes here."
@@ -187,7 +200,7 @@ export default function AssignmentEditor() {
 
       <hr />
       <div className="flex justify-end gap-2">
-        <a href="./">
+        <Link href="./">
           <button
             type="button"
             id="wd-cancel"
@@ -195,8 +208,8 @@ export default function AssignmentEditor() {
           >
             Cancel
           </button>
-        </a>{" "}
-        <a href="./">
+        </Link>{" "}
+        <Link href="./">
           <button
             type="button"
             id="wd-save"
@@ -204,7 +217,7 @@ export default function AssignmentEditor() {
           >
             Save
           </button>
-        </a>
+        </Link>
       </div>
     </>
   );
