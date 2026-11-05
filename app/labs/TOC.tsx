@@ -65,6 +65,8 @@ const activeStyle = {
 export default function TOC() {
   const pathname = usePathname() ?? "";
   return (
+    <>
+      <h4>Bear Smith !!!</h4>
     <ul>
       {LINKS.map((link) => {
         const active = link.match(pathname);
@@ -82,5 +84,6 @@ export default function TOC() {
         );
       })}
     </ul>
+    </>
   );
 }
