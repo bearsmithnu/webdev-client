@@ -22,7 +22,7 @@ export default function OtherFieldTypes() {
       <input
         type="range"
         defaultValue="4"
-        min="1"
+        min={1}
         max="5"
         id="wd-text-fields-rating"
       />
