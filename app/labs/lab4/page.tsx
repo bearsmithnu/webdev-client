@@ -7,6 +7,7 @@ import ClickEvent from "./ClickEvent";
 import Counter from "./Counter";
 import CounterBroken from "./CounterBroken";
 import DateStateVariable from "./DateStateVariable";
+import Link from "next/link";
 import ObjectStateVariable from "./ObjectStateVariable";
 import PassingDataOnEvent from "./PassingDataOnEvent";
 import PassingFunctions from "./PassingFunctions";
