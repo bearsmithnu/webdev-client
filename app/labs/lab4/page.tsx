@@ -53,6 +53,10 @@ export default function Lab4() {
       <ProfileForm />
       <ParentStateComponent />
       <PropDrilling />
+      <Link href="/labs/lab4/url-encoding/path-params/5/4">Path params</Link>
+      <Link href="/labs/lab4/url-encoding/query-params?a=5&b=3">Query params</Link>
+      <Link href="/labs/lab4/url-encoding/path-params/5/4/2">Path params with three</Link>
+      <Link href="/labs/lab4/url-encoding/query-params?a=5&b=3&c=3">Query params with three</Link>
       <UrlEncoding />
       <ContextExamples />
       <ContextProfileForm />
