@@ -1,15 +1,36 @@
+"use client";
 import { FaPlus, FaSearch } from "react-icons/fa";
 import AssignmentItem from "./AssignmentItem";
-import * as db from "../../../database";
+import { useAssignmentsStore } from "../../../store/assignmentsStore";
+import { useParams, usePathname } from "next/navigation";
+import { useState } from "react";
+import AssignmentEditor from "./AssignmentEditor";
 
-export default async function Assignments({
-  params,
-}: {
-  params: Promise<{ cid: string }>;
-}) {
-  const { cid } = await params;
-  const assignments = db.assignments.filter((assignment) => assignment.course === cid);
-  
+export default function Assignments() {
+  const [showEditor, setShowEditor] = useState(false);
+  const path = usePathname();
+
+  return (
+    <>
+      {showEditor ? (
+        <AssignmentEditor
+          closeEditor={() => setShowEditor(false)}
+          returnLink={path}
+        />
+      ) : (
+        <AssignmentsPage openEditor={() => setShowEditor(true)} />
+      )}
+    </>
+  );
+}
+
+export function AssignmentsPage({ openEditor }:
+   { openEditor: () => void }) {
+  const { cid } = useParams();
+  const assignments = useAssignmentsStore((state) => state.assignments).filter(
+    (assignment) => assignment.course === cid,
+  );
+
   return (
     <div id="wd-assignments">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
@@ -33,6 +54,7 @@ export default async function Assignments({
             id="wd-add-assignment"
             type="button"
             className="inline-flex items-center gap-1 rounded bg-red-600 px-3 py-1.5 text-sm font-medium text-white"
+            onClick={openEditor}
           >
             <FaPlus /> Assignment
           </button>
@@ -54,7 +76,7 @@ export default async function Assignments({
         {assignments.map((assignment) => (
           <AssignmentItem
             key={assignment._id}
-            cid={cid}
+            cid={cid + ""}
             aid={assignment._id}
             title={assignment.title}
             details={`Multiple Modules | Not available until ${assignment.available} | Due ${assignment.due} | ${assignment.points} pts`}
